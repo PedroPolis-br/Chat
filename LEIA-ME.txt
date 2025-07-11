@@ -3,13 +3,32 @@
 
 📁 ARQUIVOS IMPORTANTES:
 -----------------------
-✅ GUIA_INSTALACAO_WINDOWS.md  → Guia completo passo a passo
-✅ SETUP_WINDOWS.bat           → Configuração automática inicial
-✅ INICIAR_BACKEND.bat         → Script para iniciar o backend
-✅ INICIAR_FRONTEND.bat        → Script para iniciar o frontend
+🐳 GUIA_INSTALACAO_DOCKER_WINDOWS.md → Guia DOCKER (RECOMENDADO!)
+🐳 SETUP_DOCKER.bat                 → Configuração Docker automática
+✅ GUIA_INSTALACAO_WINDOWS.md        → Guia completo instalação tradicional
+✅ SETUP_WINDOWS.bat                 → Configuração automática inicial
+✅ INICIAR_BACKEND.bat               → Script para iniciar o backend
+✅ INICIAR_FRONTEND.bat              → Script para iniciar o frontend
 
 🎯 INSTALAÇÃO RÁPIDA:
 --------------------
+
+🐳 OPÇÃO 1: DOCKER (RECOMENDADO - MAIS FÁCIL):
+----------------------------------------------
+1. Instale apenas:
+   • Node.js v20.x (https://nodejs.org/)
+   • Docker Desktop (https://www.docker.com/products/docker-desktop/)
+
+2. Execute: SETUP_DOCKER.bat
+
+3. Execute: DOCKER_INICIAR.bat
+
+4. Abra 2 terminais e execute:
+   • Terminal 1: cd codatendechat-main\backend && npm run dev:server
+   • Terminal 2: cd codatendechat-main\frontend && npm start
+
+⚙️ OPÇÃO 2: INSTALAÇÃO TRADICIONAL:
+----------------------------------
 1. Instale os pré-requisitos:
    • Node.js v20.x (https://nodejs.org/)
    • PostgreSQL (https://www.postgresql.org/download/windows/)

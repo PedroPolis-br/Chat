@@ -1,0 +1,141 @@
+🐳 COMANDOS DOCKER ÚTEIS - ATENDECHAT
+=====================================
+
+📋 COMANDOS BÁSICOS:
+-------------------
+
+🚀 Iniciar todos os containers:
+   docker-compose up -d
+
+🛑 Parar todos os containers:
+   docker-compose down
+
+🔍 Ver status dos containers:
+   docker-compose ps
+
+📊 Ver logs dos containers:
+   docker-compose logs
+   docker-compose logs postgres    (apenas PostgreSQL)
+   docker-compose logs redis       (apenas Redis)
+
+🔄 Reiniciar containers:
+   docker-compose restart
+   docker-compose restart postgres (apenas PostgreSQL)
+   docker-compose restart redis    (apenas Redis)
+
+📋 GERENCIAMENTO DE DADOS:
+-------------------------
+
+🗑️ Remover containers e dados (CUIDADO!):
+   docker-compose down -v
+
+🧹 Limpar containers parados:
+   docker container prune
+
+🧹 Limpar volumes não utilizados:
+   docker volume prune
+
+🧹 Limpar tudo (CUIDADO!):
+   docker system prune -a
+
+📊 ACESSO AOS BANCOS:
+--------------------
+
+🐘 Conectar ao PostgreSQL:
+   docker exec -it atendechat-postgres psql -U postgres -d atendechat
+
+🔴 Conectar ao Redis:
+   docker exec -it atendechat-redis redis-cli
+   (dentro do Redis: AUTH atendechat123)
+
+💻 Interface web do banco (Adminer):
+   http://localhost:8081
+   - Sistema: PostgreSQL
+   - Servidor: postgres
+   - Usuário: postgres
+   - Senha: atendechat123
+   - Base: atendechat
+
+🔍 DIAGNÓSTICO:
+--------------
+
+📈 Ver uso de recursos:
+   docker stats
+
+📂 Ver volumes:
+   docker volume ls
+
+🌐 Ver redes:
+   docker network ls
+
+📋 Informações detalhadas do container:
+   docker inspect atendechat-postgres
+   docker inspect atendechat-redis
+
+🚨 SOLUÇÃO DE PROBLEMAS:
+-----------------------
+
+🔄 Se o PostgreSQL não conectar:
+   docker-compose restart postgres
+   (aguardar 10-15 segundos)
+
+🔄 Se o Redis não conectar:
+   docker-compose restart redis
+
+🗑️ Reset completo do banco (CUIDADO - apaga todos os dados!):
+   docker-compose down -v
+   docker-compose up -d
+   (depois execute as migrações novamente)
+
+📊 Verificar se o banco está aceitando conexões:
+   docker exec atendechat-postgres pg_isready -U postgres
+
+🔴 Testar conexão Redis:
+   docker exec atendechat-redis redis-cli ping
+
+⚡ COMANDOS RÁPIDOS:
+------------------
+
+🚀 Iniciar ambiente completo:
+   SETUP_DOCKER.bat
+
+🏃 Start rápido (se já configurado):
+   docker-compose up -d
+
+🛑 Parar tudo:
+   docker-compose down
+
+🔄 Restart completo:
+   docker-compose down
+   docker-compose up -d
+
+📝 CREDENCIAIS PADRÃO:
+---------------------
+
+🐘 PostgreSQL:
+   Host: localhost:5432
+   Usuário: postgres
+   Senha: atendechat123
+   Banco: atendechat
+
+🔴 Redis:
+   Host: localhost:6379
+   Senha: atendechat123
+
+💻 Aplicação:
+   Frontend: http://localhost:3000
+   Backend: http://localhost:8080
+   Adminer: http://localhost:8081
+
+📧 Login padrão da aplicação:
+   Email: admin@atendechat.com
+   Senha: 123456
+
+💡 DICAS:
+--------
+
+• Os dados ficam salvos mesmo se você parar os containers
+• Use docker-compose down -v apenas se quiser apagar TODOS os dados
+• O Adminer é uma interface web para gerenciar o PostgreSQL
+• Sempre aguarde alguns segundos após iniciar os containers
+• Para desenvolvimento, deixe os containers sempre rodando
