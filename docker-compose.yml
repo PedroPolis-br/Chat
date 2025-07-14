@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:14
+    container_name: atendechat-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: atendechat
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: atendechat123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - atendechat-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d atendechat"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: atendechat-redis
+    restart: always
+    command: redis-server --requirepass atendechat123
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - atendechat-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # Adminer (Database Admin Tool) - Opcional
+  adminer:
+    image: adminer
+    container_name: atendechat-adminer
+    restart: always
+    ports:
+      - "8081:8080"
+    networks:
+      - atendechat-network
+    depends_on:
+      - postgres
+    profiles:
+      - admin
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  atendechat-network:
+    driver: bridge

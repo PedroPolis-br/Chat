@@ -1,0 +1,73 @@
+🚀 ATENDECHAT - INSTALAÇÃO NO WINDOWS
+=====================================
+
+📁 ARQUIVOS IMPORTANTES:
+-----------------------
+🐳 GUIA_INSTALACAO_DOCKER_WINDOWS.md → Guia DOCKER (RECOMENDADO!)
+🐳 SETUP_DOCKER.bat                 → Configuração Docker automática
+✅ GUIA_INSTALACAO_WINDOWS.md        → Guia completo instalação tradicional
+✅ SETUP_WINDOWS.bat                 → Configuração automática inicial
+✅ INICIAR_BACKEND.bat               → Script para iniciar o backend
+✅ INICIAR_FRONTEND.bat              → Script para iniciar o frontend
+
+🎯 INSTALAÇÃO RÁPIDA:
+--------------------
+
+🐳 OPÇÃO 1: DOCKER (RECOMENDADO - MAIS FÁCIL):
+----------------------------------------------
+1. Instale apenas:
+   • Node.js v20.x (https://nodejs.org/)
+   • Docker Desktop (https://www.docker.com/products/docker-desktop/)
+
+2. Execute: SETUP_DOCKER.bat
+
+3. Execute: DOCKER_INICIAR.bat
+
+4. Abra 2 terminais e execute:
+   • Terminal 1: cd codatendechat-main\backend && npm run dev:server
+   • Terminal 2: cd codatendechat-main\frontend && npm start
+
+⚙️ OPÇÃO 2: INSTALAÇÃO TRADICIONAL:
+----------------------------------
+1. Instale os pré-requisitos:
+   • Node.js v20.x (https://nodejs.org/)
+   • PostgreSQL (https://www.postgresql.org/download/windows/)
+   • Docker Desktop (https://www.docker.com/products/docker-desktop/)
+
+2. Execute: SETUP_WINDOWS.bat
+
+3. Configure o PostgreSQL:
+   • Crie um banco chamado "atendechat"
+   • Anote a senha do usuário postgres
+
+4. Inicie o Redis:
+   docker run --name redis-atendechat -p 6379:6379 --restart always -d redis redis-server --requirepass MinhaRedisPassword123
+
+5. Configure o arquivo backend\.env:
+   • Altere DB_PASS para sua senha do PostgreSQL
+   • Configure as informações de email (opcional)
+
+6. Execute: INICIAR_BACKEND.bat (primeiro terminal)
+
+7. Execute: INICIAR_FRONTEND.bat (segundo terminal)
+
+🌐 ACESSO:
+----------
+Frontend: http://localhost:3000
+Backend:  http://localhost:8080
+
+📧 LOGIN PADRÃO:
+---------------
+Email: admin@atendechat.com
+Senha: 123456
+
+🆘 PROBLEMAS?
+-------------
+Consulte o arquivo: GUIA_INSTALACAO_WINDOWS.md
+
+💡 DICAS:
+---------
+• Sempre inicie o backend ANTES do frontend
+• Mantenha o Docker Desktop rodando
+• Verifique se as portas 3000, 8080, 5432 e 6379 estão livres
+• Use dois terminais separados (um para backend, outro para frontend)
