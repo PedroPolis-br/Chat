@@ -29,3 +29,6 @@ nohup: ignoring input
 [32mINFO[39m [19:13:20.009] (32354): [36m[🏁] - Verificando campanhas...[39m
 [32mINFO[39m [19:13:20.011] (32354): [36m[🏁] - Finalizando verificação de campanhas programadas...[39m
 [32mINFO[39m [19:13:20.011] (32354): [36m[📌] -   Campanha repeat:0b579e70b2b5a70bc8f029c09e6fd7ff:1752520400000 completada em 20003ms[39m
+[32mINFO[39m [19:13:40.008] (32354): [36m[🏁] - Verificando campanhas...[39m
+[32mINFO[39m [19:13:40.010] (32354): [36m[🏁] - Finalizando verificação de campanhas programadas...[39m
+[32mINFO[39m [19:13:40.011] (32354): [36m[📌] -   Campanha repeat:0b579e70b2b5a70bc8f029c09e6fd7ff:1752520420000 completada em 20003ms[39m
