@@ -1,0 +1,34 @@
+nohup: ignoring input
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[WARN] This Redis server's `default` user does not require a password, but a password was supplied
+[32mINFO[39m [19:12:35.931] (32354): [36mIniciando geração de boletos[39m
+[32mINFO[39m [19:12:36.005] (32354): [36mServer started on port: 8080[39m
+[32mINFO[39m [19:12:36.010] (32354): [36m[🏁] - Iniciando processamento de filas[39m
+[32mINFO[39m [19:12:40.009] (32354): [36m[🏁] - Verificando campanhas...[39m
+[32mINFO[39m [19:12:40.014] (32354): [36m[🏁] - Finalizando verificação de campanhas programadas...[39m
+[32mINFO[39m [19:12:40.014] (32354): [36m[📌] -   Campanha repeat:0b579e70b2b5a70bc8f029c09e6fd7ff:1752520360000 completada em 20008ms[39m
+[32mINFO[39m [19:13:00.010] (32354): [36m[🏁] - Verificando campanhas...[39m
+[32mINFO[39m [19:13:00.018] (32354): [36m[🏁] - Finalizando verificação de campanhas programadas...[39m
+[32mINFO[39m [19:13:00.019] (32354): [36m[📌] -   Campanha repeat:0b579e70b2b5a70bc8f029c09e6fd7ff:1752520380000 completada em 20012ms[39m
+[32mINFO[39m [19:13:00.982] (32354): [36mServiço de transferencia de tickets iniciado[39m
+[32mINFO[39m [19:13:20.009] (32354): [36m[🏁] - Verificando campanhas...[39m
+[32mINFO[39m [19:13:20.011] (32354): [36m[🏁] - Finalizando verificação de campanhas programadas...[39m
+[32mINFO[39m [19:13:20.011] (32354): [36m[📌] -   Campanha repeat:0b579e70b2b5a70bc8f029c09e6fd7ff:1752520400000 completada em 20003ms[39m
+[32mINFO[39m [19:13:40.008] (32354): [36m[🏁] - Verificando campanhas...[39m
+[32mINFO[39m [19:13:40.010] (32354): [36m[🏁] - Finalizando verificação de campanhas programadas...[39m
+[32mINFO[39m [19:13:40.011] (32354): [36m[📌] -   Campanha repeat:0b579e70b2b5a70bc8f029c09e6fd7ff:1752520420000 completada em 20003ms[39m
